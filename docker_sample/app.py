@@ -17,8 +17,7 @@ def hello():
 
     html = "<h3>Hello {name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
-           "<b>Visits:</b> {visits}" \
-           "<b>url</b> {path_info = request.META.get('PATH_INFO')}"
+           "<b>Visits:</b> {visits}" 
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
 
 if __name__ == "__main__":
